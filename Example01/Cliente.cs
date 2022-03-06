@@ -4,12 +4,20 @@ using System.Text;
 
 namespace Example01
 {
-    public class Clientes
+    public class Cliente
     {
 
         public int OrderTotal { get; set; }
         public string ClienteNombre { get; set; }
         public int Descuento = 10;
+        public bool IsPremiun { get; set; }
+
+
+        public Cliente()
+        {
+            IsPremiun = false;
+        }
+
 
         public string CrearNombreCompleto(string nombre, string apellido)
         {

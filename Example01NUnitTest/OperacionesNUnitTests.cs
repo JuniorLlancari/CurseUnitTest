@@ -7,13 +7,13 @@ using System.Text;
 namespace Example01NUnitTest
 {
     [TestFixture]
-    public class OperacionesNUnitTest
+    public class OperacionesNUnitTests
     {
         [Test]
         public void SumarNumeros_InputDosNumeros_GetValorCorrecto()
         {
             //Arrange (Inicializar)
-            Operaciones oper = new Operaciones();
+            Operacion oper = new Operacion();
             int numero1Test = 45;
             int numero2Test = 14;
             //Act
@@ -25,7 +25,7 @@ namespace Example01NUnitTest
         public void IsNumeroPar_InputNumeroImpar_ReturnFalse()
         {
 
-            Operaciones oper = new Operaciones();
+            Operacion oper = new Operacion();
             int numeroTest = 5;
             //Act
             bool resultado = oper.IsNumeroPar(numeroTest);
@@ -41,7 +41,7 @@ namespace Example01NUnitTest
         [TestCase(7, ExpectedResult = false)]
         public bool IsNumeroPar_InputNumeroImpar_ReturnFalseV2(int numeroPar)
         {
-            Operaciones oper = new Operaciones();
+            Operacion oper = new Operacion();
             return oper.IsNumeroPar(numeroPar);
         }
 
@@ -53,7 +53,7 @@ namespace Example01NUnitTest
         public void IsNumeroPar_InputNumeroPar_ReturnTrue(int numeroPar)
         {
             //Arrange (Inicializar)
-            Operaciones oper = new Operaciones();
+            Operacion oper = new Operacion();
             //Act
             bool resultado = oper.IsNumeroPar(numeroPar);
             //Assert
@@ -68,7 +68,7 @@ namespace Example01NUnitTest
         [TestCase(2.23, 1.21)]
         public void SumarDecimales_InputDosNumeros_GetValorCorrecto(double num1, double num2)
         {
-            Operaciones oper = new Operaciones();
+            Operacion oper = new Operacion();
             double resultado = oper.SumarDecimales(num1, num2);
             //Añadimos un intervalo de +-0.1
             Assert.AreEqual(3.4, resultado, 0.1);
@@ -78,7 +78,7 @@ namespace Example01NUnitTest
         public void GetListaNumerosImpares_InputMinimoMaximoIntervalos_ReturnsListaImpares()
         {
             //Arrange
-            Operaciones op = new Operaciones();
+            Operacion op = new Operacion();
             List<int> numerosImparesEsperados = new List<int> { 5, 7, 9 };
             //Ac
             List<int> resultados = op.GetListaNumerosImpares(5, 10);

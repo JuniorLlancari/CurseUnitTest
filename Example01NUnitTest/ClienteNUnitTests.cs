@@ -7,15 +7,15 @@ using System.Text;
 namespace Example01NUnitTest
 {
     [TestFixture]
-    public class ClienteNUnitTest
+    public class ClienteNUnitTests
     {
 
-        private Clientes cliente { get; set; }
+        private Cliente cliente { get; set; }
 
         [SetUp]
         public void Setup()
         {
-            cliente = new Clientes();
+            cliente = new Cliente();
         }
 
 

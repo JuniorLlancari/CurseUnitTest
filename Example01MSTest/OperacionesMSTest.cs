@@ -13,7 +13,7 @@ namespace Example01MSTest
         public void SumarNumeros_InputDosNumeros_GetValorCorrecto()
         {
             //Arrange (Inicializar)
-            Operaciones oper = new Operaciones();
+            Operacion oper = new Operacion();
             int numero1Test = 45;
             int numero2Test = 14;
             //Act

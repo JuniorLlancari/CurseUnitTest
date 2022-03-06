@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Example01
 {
-    public class Operaciones
+    public class Operacion
     {
         public List<int> NumerosImpares = new List<int>();
 
